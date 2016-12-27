@@ -1,0 +1,18 @@
+syntax = "proto3"; 
+package buffer;
+
+message board {
+	repeated bool current_state = 1; 
+	repeated bool our_group_lib1 = 2; 
+	repeated bool our_group_lib2 = 3; 
+	repeated bool our_group_lib3_plus = 4;
+	repeated bool oppo_group_lib1 = 5;
+	repeated bool oppo_group_lib2 = 6;
+	repeated bool oppo_group_lib3_plus = 7;
+}
+
+message rank {
+	repeated int32 x_cor = 1;
+	repeated int32 y_cor = 2;
+	repeated float value = 3;
+}

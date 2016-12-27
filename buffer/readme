@@ -1,0 +1,16 @@
+complie protobuf:
+protoc -I=. --cpp_out=. buffer.proto
+compile file:
+g++ -o read_test -I /usr/local/protobuf/include read_test.cpp test.pb.cc -lprotobuf
+
+ tar -xzf protobuf-2.1.0.tar.gz 
+ cd protobuf-2.1.0 
+ ./configure --prefix=/usr/local/protobuf
+ make 
+ make check 
+ make install 
+#cd ./python
+#python setup.py build
+#python setup.py test
+#python setup.py install
+c_client用于rank_responce接收，c_server用于board_request发送，py_client用于board_response接收，py_server用于rank_repust发送
